@@ -1,23 +1,33 @@
+import React from "react";
+import Head from "next/head";
+
 import { CompletedChalenges } from "../components/CompletedChalenges";
+import { Countdown } from "../components/Countdown";
 import { ExperienceBar } from "../components/ExperienceBar";
 import { Profile } from "../components/Profile";
+import { ChallengeBox } from "../components/ChallengeBox";
 
-import styles from '../styles/pages/Home.module.css';
+
+import styles from "../styles/pages/Home.module.css";
 
 export default function Home() {
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Inínico | MoveIt</title>
+      </Head>
       <ExperienceBar />
 
       <section>
-          <div className="">
-            <Profile />
-            <CompletedChalenges />
-          </div>
+        <div className="">
+          <Profile />
+          <CompletedChalenges />
+          <Countdown />
+        </div>
 
-          <div className="">
-
-          </div>
+        <div className="">
+          <ChallengeBox />
+        </div>
       </section>
     </div>
   );
