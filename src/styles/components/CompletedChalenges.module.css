@@ -8,10 +8,18 @@
     font-weight: 500;
 }
 
-.completedChalengesContainer span:first-child {
+.completedChalengesContainer span:nth-child(odd) {
     font-size: 1.25rem;
 }
 
-.completedChalengesContainer span:last-child {
+.completedChalengesContainer span:nth-child(even) {
     font-size: 1.5rem;
+}
+
+.completedChalengesContainer span:nth-child(2) {
+    color: var(--green)
+}
+
+.completedChalengesContainer span:last-child {
+    color: var(--red)
 }
